@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: guestbook
+    path: nginx-argocd
     repoURL: https://github.com/ravindra-ui/nginx-argocd.git
     targetRevision: main
     path: argocd/guestbook
