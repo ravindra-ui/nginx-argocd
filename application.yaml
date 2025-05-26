@@ -12,7 +12,7 @@ spec:
     path: .
     repoURL: https://github.com/ravindra-ui/nginx-argocd.git
     targetRevision: main
-    path: guestbook
+    path: .
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
