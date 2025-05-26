@@ -2,14 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: guestbook
-  namespace: nginx
+  namespace: argocd
 spec:
   destination:
-    namespace: nginx
+    namespace: argocd
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: nginx-argocd
+    path: .
     repoURL: https://github.com/ravindra-ui/nginx-argocd.git
     targetRevision: main
     path: guestbook
