@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+  namespace: nginx
+spec:
+  destination:
+    namespace: nginx
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: nginx-argocd
+    repoURL: https://github.com/ravindra-ui/nginx-argocd.git
+    targetRevision: main
+    path: guestbook
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
